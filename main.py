@@ -1,7 +1,7 @@
 # самый начальный шаблон
 import pygame
 import sys
-sys. ()
+
 FPS = 30
 W = 1980  # ширина экрана
 H = 1080  # высота экрана
@@ -30,4 +30,3 @@ while 1:
     pygame.draw.circle(sc, BLUE, (x, y), r)
     pygame.display.update()
     clock.tick(FPS)
-    if
