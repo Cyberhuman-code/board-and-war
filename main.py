@@ -1,6 +1,5 @@
 import time
 import random
-
 def attackActive():
     if plr1[int(percNum)][0] == "Turrel":
         for f in range(random.randrange(1, 5)):
@@ -12,9 +11,6 @@ def attackActive():
                         plr1[len(plr1) - 1] += plr2[int(attackNum)][4]
                         plr1[int(percNum)][5] += 0.5
                     print(f"Tower {plr2[int(attackNum)][0]} Now have {plr2[int(attackNum)][3]} HP")
-                    plr1[int(percNum)][7] = False
-                    time.sleep(plr1[int(percNum)][6])
-                    plr1[int(percNum)][7] = True
                 else:
                     print(f"Tower {plr2[int(attackNum)][0]} already died")
             else:
@@ -26,9 +22,6 @@ def attackActive():
                 if plr2[int(attackNum)][3] <= 0:
                     plr1[int(percNum)][5] += 0.5
                 print(f"Tower {plr2[int(attackNum)][0]} Now have {plr2[int(attackNum)][3]} HP")
-                plr1[int(percNum)][7] = False
-                time.sleep(plr1[int(percNum)][6])
-                plr1[int(percNum)][7] = True
             else:
                 print(f"Tower {plr2[int(attackNum)][0]} already died")
     elif plr1[int(percNum)][0] == "Dragon":
@@ -39,9 +32,6 @@ def attackActive():
                     plr1[int(percNum)][3] += random.randrange(20, 40)
                     plr1[int(percNum)][5] += 0.5
                 print(f"Tower {plr2[int(attackNum)][0]} Now have {plr2[int(attackNum)][3]} HP")
-                plr1[int(percNum)][7] = False
-                time.sleep(plr1[int(percNum)][6])
-                plr1[int(percNum)][7] = True
             else:
                 print(f"Tower {plr2[int(attackNum)][0]} already died")
     elif plr1[int(percNum)][0] == "Gladiator":
@@ -51,9 +41,6 @@ def attackActive():
                 if plr2[int(attackNum)][3] <= 0:
                     plr1[int(percNum)][5] += 0.5
                 print(f"Tower {plr2[int(attackNum)][0]} Now have {plr2[int(attackNum)][3]} HP")
-                plr1[int(percNum)][7] = False
-                time.sleep(plr1[int(percNum)][6])
-                plr1[int(percNum)][7] = True
             else:
                 print(f"Tower {plr2[int(attackNum)][0]} already died")
         else:
@@ -67,15 +54,25 @@ def attack():
                 attackActive()
 
 def step():
+    global canStep
+    canStep = True
     if 10 > int(tohodNumX) > 0 and 10 > int(tohodNumY) > 0:
         if plr1[int(hodNum)][3] > 0:
-            for f in range(5):
-                if plr1[int(hodNum)][1]-int(tohodNumX) == 1 or int(tohodNumX)-plr1[int(hodNum)][1] and plr1[int(hodNum)][2] == int(tohodNumY):
-                    plr1[int(hodNum)][1] = int(tohodNumX)
-                    print(f"Now Dragon on {plr1[int(hodNum)][1]} X, {plr1[int(hodNum)][2]} Y")
-                elif plr1[int(hodNum)][2]-int(tohodNumY) == 1 or int(tohodNumY)-plr1[int(hodNum)][2] and plr1[int(hodNum)][1] == int(tohodNumX):
-                    plr1[int(hodNum)][2] = int(tohodNumY)
-                    print(f"Now Dragon on {plr1[int(hodNum)][1]} X, {plr1[int(hodNum)][2]} Y")
+            for s in range(len(plr2) - 1):
+                if plr2[s][1] == int(tohodNumX) and plr2[s][2] == int(tohodNumY):
+                    canStep = False
+                if plr1[s][1] == int(tohodNumX) and plr1[s][2] == int(tohodNumY):
+                    canStep = False
+            if canStep:
+                for f in range(2):
+                    if plr1[int(hodNum)][1]-int(tohodNumX) == 1 or int(tohodNumX)-plr1[int(hodNum)][1] and plr1[int(hodNum)][2] == int(tohodNumY):
+                        plr1[int(hodNum)][1] = int(tohodNumX)
+                        print(f"Now {plr1[int(hodNum)][0]} on {plr1[int(hodNum)][1]} X, {plr1[int(hodNum)][2]} Y")
+                    elif plr1[int(hodNum)][2]-int(tohodNumY) == 1 or int(tohodNumY)-plr1[int(hodNum)][2] and plr1[int(hodNum)][1] == int(tohodNumX):
+                        plr1[int(hodNum)][2] = int(tohodNumY)
+                        print(f"Now {plr1[int(hodNum)][0]} on {plr1[int(hodNum)][1]} X, {plr1[int(hodNum)][2]} Y")
+            else:
+                print(f"On cage X {tohodNumX}, Y {tohodNumY} is located other tower")
 def health():
     if plr1[int(healthNum)][3] > 0:
         plr1[int(healthNum)][3] += 75
