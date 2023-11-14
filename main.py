@@ -36,7 +36,7 @@ def attackActive():
                 print(f"Tower {plr2[int(attackNum)][0]} already died")
     elif plr1[int(percNum)][0] == "Gladiator":
         if plr2[int(attackNum)][3] > 0:
-            plr2[int(attackNum)][3] -= random.randrange(plr1[int(percNum)][4], plr1[int(percNum)][4]+10) * plr1[int(percNum)][5]
+            plr2[int(attackNum)][3] -= random.randrange(plr1[int(percNum)][4]-10, plr1[int(percNum)][4]+10) * plr1[int(percNum)][5]
             if plr2[int(attackNum)][3] > 0:
                 if plr2[int(attackNum)][3] <= 0:
                     plr1[int(percNum)][5] += 0.5
@@ -88,7 +88,7 @@ def upgrade():
 
 # Tower: [0] Name, [1] X, [2] Y, [3] Health, [4] Attack, [5] MultiplyAttack [6] Reload [7] Can Attack
 # Player: [5] Cash
-plr1 = [["Dragon", 1, 1, 200, 60, 1, 30, True, 0],["Turrel", 2, 1, 105, 20, 1, 15, True, 0],["Turrel", 3, 1, 105, 20, 1, 20, True, 0],["Arrowman", 4, 1, 90, 45, 1, 15, True, 0], ["Gladiator", 5, 1, 100, 50, 1, 10, True, 0], ["Engineer", 6, 1, 200, 70, 1, 1, False, 250], 0]
+plr1 = [["Dragon", 1, 1, 200, 60, 1, 30, True, 0],["Turrel", 2, 1, 105, 20, 1, 15, True, 0],["Turrel", 3, 1, 105, 20, 1, 20, True, 0],["Arrowman", 4, 1, 90, 45, 1, 15, True, 0], ["Gladiator", 5, 1, 100, 40, 1, 10, True, 0], ["Engineer", 6, 1, 200, 70, 1, 1, False, 250], 0]
 plr2 = [["Dragon", 1, 5, 200, 60, 1, 30, True, 0],["Turrel", 2, 5, 105, 20, 5, 15, True, 0],["Turrel", 3, 5, 105, 20, 1, 20, True, 0],["Arrowman", 4, 5, 90, 45, 1, 15, True, 0], ["Gladiator", 5, 5, 100, 50, 1, 10, True, 0], ["Engineer", 6, 5, 200, 70, 1, 1, False, 250], 0]
 def towers():
     print("Your Towers:\n")

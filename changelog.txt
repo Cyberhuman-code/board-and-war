@@ -17,6 +17,8 @@ Bug Fix:
 - Fix other bug
 Rebalance:
 - Rebalanced all towers
+- Rebalance gladiator damage and exclusive attack
+- Remake all Exclusive attacks
 - Remove "Krisa" Towe
 - Remove "Reload System"
 New towers:
@@ -27,7 +29,6 @@ Other:
 - Add message: Step is not found
 - Rename stap() -> step()
 - Add function "Upgrade"
-- Remake all Exclusive attacks
 - Add function "Statistic"
 - Add cash system
 - Add Buy tower system
