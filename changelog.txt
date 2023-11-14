@@ -1,0 +1,27 @@
+13.11.2023 v0.1:
+- Fix died walk tower bug
+- New tower Gladiator
+- Fix attack Bug
+- Add health
+- Add in write towers list health
+- Fix health and gladiator
+- Krisa only one 
+
+14.11.2023 v0.2:
+- Add cash in Player statistic
+- Fix Dragon with 25 HP
+- Fix player 2 Dragon position
+- Add message: Step is not found
+- Rename stap() -> step()
+- Add function "Upgrade"
+- Rebalance Reload time
+- Fix towers print
+- New tower "Arrowman"
+- Rebalanced all towers
+- Remake all Exclusive attacks
+- Add function "Statistic"
+- Add cash system
+- Add new tower "Engineer"
+- Add Buy tower system
+- Remove "Krisa" Towe
+- Fix attack bug
