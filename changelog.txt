@@ -1,35 +1,56 @@
-13.11.2023 v0.1:
-- Fix died walk tower bug
-- New tower Gladiator
-- Fix attack Bug
-- Add health
-- Add in write towers list health
-- Fix health and gladiator
-- Krisa only one 
+11.11.2023-12.11.2023 v0:
+Other:
+- Add function "Attack"
+- Add function "Step"
+- Add function "Upgrade"
+- Add function "Buy"
+- Add starts system
 
-14.11.2023 v0.2:
+15.11.2023-16.11.2023 v1.0 RELEASE:
 Bug Fix:
-- Fix Dragon with 25 HP
-- Fix player 2 Dragon position
+- Fix step bug
+- Fix cash system
+- Fix can Attack system
+- Fix buy tower system
+- Fix health bug
+- Fix choose system
+- Fix towers system
+- Fix a lot of cash Player 1
+- Fix died walk tower bug
+- Fix attack Bug
+- Fix health and gladiator
 - Fix towers print
 - Fix attack bug
 - Fix stack towers bug
 - Fix other bug
 Rebalance:
 - Rebalanced all towers
-- Rebalance gladiator damage and exclusive attack
-- Remake all Exclusive attacks
-- Remove "Krisa" Towe
-- Remove "Reload System"
-New towers:
-- Add new tower "Engineer"
+- Rebalanced all exclusive attack
+- Rebalanced steps
+- Rebalanced costs
+Towers:
+- Add new tower "Gladiator"
+- Add new tower "Turrel"
 - Add new tower "Arrowman"
+- Add new tower "Tank"
+- Add new tower "Eye"
+- Add new tower "SwordMan"
+- Add new tower "Gun"
+- Add new tower "Guard"
+- Add new tower "Rocketman"
 Other:
-- Add cash in Player statistic
-- Add message: Step is not found
-- Rename stap() -> step()
-- Add function "Upgrade"
+- Remake towers position
+- Add trap system
+- Add stun system
+- Remove upgrade tower system
+- Add message: Now tower can't attack
+- Add system player 2 steps
+- Add health
+- Add in write towers list health
 - Add function "Statistic"
 - Add cash system
 - Add Buy tower system
+- Add cash in Player statistic
+- Add message: Step is not found
 
+- Full beta-test and fix all bug
