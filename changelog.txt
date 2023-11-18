@@ -6,7 +6,7 @@ Other:
 - Add function "Buy"
 - Add starts system
 
-15.11.2023-16.11.2023 v1.0 RELEASE:
+13.11.2023-16.11.2023 v1.0 RELEASE:
 Bug Fix:
 - Fix step bug
 - Fix cash system
