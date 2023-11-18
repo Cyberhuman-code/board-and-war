@@ -141,15 +141,15 @@ def step():
                 if plr1[s][1] == int(tohodNumX) and plr1[s][2] == int(tohodNumY):
                     canStep = False
                     print(f"On cage X {tohodNumX}, Y {tohodNumY} is located other tower")
-                if not plr1[s][7]:
-                    canStep = False
-                    print(f"Tower {plr1[s][0]} is not purchased!")
-                if not plr1[s][10]:
-                    canStep = False
-                    print(f"Tower {plr1[s][0]} is stun!")
+            if not plr1[int(hodNum)][7]:
+                canStep = False
+                print(f"Tower {plr1[int(hodNum)][0]} is not purchased!")
+            if plr1[int(hodNum)][10]:
+                canStep = False
+                print(f"Tower {plr1[int(hodNum)][0]} is stun!")
             if canStep:
-                for m in range(plr1[hodNum][9]):
-                    f = plr1[hodNum][9]-m
+                for m in range(plr1[int(hodNum)][9]):
+                    f = plr1[int(hodNum)][9]-m
                     if f == plr1[int(hodNum)][1]-int(tohodNumX) == 1 or f == int(tohodNumX)-plr1[int(hodNum)][1] and plr1[int(hodNum)][2] == int(tohodNumY):
                         for v in range(len(streep)):
                             if int(tohodNumX) == streep[v][0] and int(tohodNumY) == streep[v][1]:

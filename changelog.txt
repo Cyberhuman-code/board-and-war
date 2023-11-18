@@ -23,6 +23,7 @@ Bug Fix:
 - Fix attack bug
 - Fix stack towers bug
 - Fix other bug
+- Fix integer steps
 Rebalance:
 - Rebalanced all towers
 - Rebalanced all exclusive attack
